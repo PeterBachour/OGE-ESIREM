@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDCursus" representedClassName="CDCursus" syncable="YES" codeGenerationType="class">
+        <attribute name="cdNom" optional="YES" attributeType="String"/>
+        <relationship name="cdMatiere" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMatiere" inverseName="cdCursus" inverseEntity="CDMatiere"/>
+    </entity>
+    <entity name="CDEtudiant" representedClassName="CDEtudiant" syncable="YES" codeGenerationType="class">
+        <attribute name="cdFirstName" optional="YES" attributeType="String"/>
+        <attribute name="cdLastName" optional="YES" attributeType="String"/>
+        <attribute name="cdNumeroEtudiant" optional="YES" attributeType="String"/>
+        <relationship name="cdNoteEtudiant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDNote" inverseName="cdNoteEtudiant" inverseEntity="CDNote"/>
+    </entity>
+    <entity name="CDExamen" representedClassName="CDExamen" syncable="YES" codeGenerationType="class">
+        <attribute name="cdPoids" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cdTitre" optional="YES" attributeType="String"/>
+        <relationship name="cdExMatiere" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMatiere" inverseName="cdExamen" inverseEntity="CDMatiere"/>
+        <relationship name="cdNote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDNote" inverseName="cdNoteExamen" inverseEntity="CDNote"/>
+    </entity>
+    <entity name="CDMatiere" representedClassName="CDMatiere" syncable="YES" codeGenerationType="class">
+        <attribute name="cdCode" optional="YES" attributeType="String"/>
+        <attribute name="cdCredit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cdTitre" optional="YES" attributeType="String"/>
+        <relationship name="cdCursus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDCursus" inverseName="cdMatiere" inverseEntity="CDCursus"/>
+        <relationship name="cdExamen" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDExamen" inverseName="cdExMatiere" inverseEntity="CDExamen"/>
+        <relationship name="cdSeance" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDSeance" inverseName="cdMatiere" inverseEntity="CDSeance"/>
+        <relationship name="cdSemestre" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDSemestre" inverseName="cdMatiere" inverseEntity="CDSemestre"/>
+    </entity>
+    <entity name="CDNote" representedClassName="CDNote" syncable="YES" codeGenerationType="class">
+        <attribute name="cdCoeff" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cdNote" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="cdNoteEtudiant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEtudiant" inverseName="cdNoteEtudiant" inverseEntity="CDEtudiant"/>
+        <relationship name="cdNoteExamen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDExamen" inverseName="cdNote" inverseEntity="CDExamen"/>
+    </entity>
+    <entity name="CDSeance" representedClassName="CDSeance" syncable="YES" codeGenerationType="class">
+        <attribute name="cdDebut" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="cdFin" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="cdMatiere" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMatiere" inverseName="cdSeance" inverseEntity="CDMatiere"/>
+    </entity>
+    <entity name="CDSemestre" representedClassName="CDSemestre" syncable="YES" codeGenerationType="class">
+        <attribute name="cdAnnee" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cdNSemestre" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="cdMatiere" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMatiere" inverseName="cdSemestre" inverseEntity="CDMatiere"/>
+    </entity>
+    <elements>
+        <element name="CDCursus" positionX="-170.69921875" positionY="-173.40234375" width="128" height="73"/>
+        <element name="CDEtudiant" positionX="106.9453125" positionY="-312.3515625" width="128" height="103"/>
+        <element name="CDSeance" positionX="61.95703125" positionY="188.23046875" width="128" height="88"/>
+        <element name="CDSemestre" positionX="-149.5703125" positionY="28.7109375" width="128" height="88"/>
+        <element name="CDExamen" positionX="392.9453125" positionY="42.52734375" width="128" height="103"/>
+        <element name="CDNote" positionX="368.015625" positionY="-270.7890625" width="128" height="103"/>
+        <element name="CDMatiere" positionX="108.73828125" positionY="-96.53515625" width="128" height="148"/>
+    </elements>
+</model>
