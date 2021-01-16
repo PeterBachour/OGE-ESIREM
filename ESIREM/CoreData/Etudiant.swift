@@ -14,7 +14,7 @@ protocol  Etudiant {
     var lastname : String {
         set get
     }
-    var matricule : String {
+    var nbEtudiant : String {
         set get
     }
     var note : [Notes]{
@@ -24,7 +24,7 @@ protocol  Etudiant {
     func remove(note:Notes)
     
     func matieres()->[Matiere]
-    }
+}
 
 extension CDEtudiant : Etudiant {
     
@@ -38,7 +38,7 @@ extension CDEtudiant : Etudiant {
     
     func matieres() -> [Matiere] {
         var r=[Matiere]()
-        
+
         for n in self.note{
             let m=n.Examen.Matiere
             if r.contains(where: { (x) -> Bool in
@@ -56,7 +56,7 @@ extension CDEtudiant : Etudiant {
                 return (a as! Notes).Examen.Matiere.Code < (b as! Notes).Examen.Matiere.Code
             }) as! [Notes]
         }
-        
+
     }
     var firstname : String {
         set{
@@ -74,12 +74,12 @@ extension CDEtudiant : Etudiant {
             return cdLastName!
         }
     }
-    var matricule : String {
+    var nbEtudiant : String {
         set{
-            cdMatricule = newValue
+            cdNumeroEtudiant = newValue
         }
         get{
-            return cdMatricule!
+            return cdNumeroEtudiant!
         }
     }
 }

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DC13ABC425AED7E30045E8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13ABC325AED7E30045E8FA /* AppDelegate.swift */; };
-		DC13ABC625AED7E30045E8FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13ABC525AED7E30045E8FA /* SceneDelegate.swift */; };
-		DC13ABC825AED7E30045E8FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13ABC725AED7E30045E8FA /* ViewController.swift */; };
 		DC13ABCB25AED7E30045E8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC13ABC925AED7E30045E8FA /* Main.storyboard */; };
 		DC13ABCE25AED7E40045E8FA /* ESIREM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC13ABCC25AED7E40045E8FA /* ESIREM.xcdatamodeld */; };
 		DC13ABD025AED8010045E8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC13ABCF25AED8010045E8FA /* Assets.xcassets */; };
@@ -22,13 +20,14 @@
 		DC13ABED25AEE2370045E8FA /* Cursus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13ABEC25AEE2370045E8FA /* Cursus.swift */; };
 		DC13ABF025AEE2490045E8FA /* Examen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13ABEF25AEE2490045E8FA /* Examen.swift */; };
 		DC13ABF325AEE3990045E8FA /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13ABF225AEE3990045E8FA /* Facade.swift */; };
+		DC3CCF8D25B31C3100538D30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3CCF8C25B31C3100538D30 /* SceneDelegate.swift */; };
+		DC3CCF9025B3220400538D30 /* MatiereNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */; };
+		DC52445925B1F65E008CD9D6 /* EtudiantNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC13ABC025AED7E30045E8FA /* ESIREM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESIREM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC13ABC325AED7E30045E8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC13ABC525AED7E30045E8FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC13ABC725AED7E30045E8FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC13ABCA25AED7E30045E8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC13ABCD25AED7E40045E8FA /* ESIREM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ESIREM.xcdatamodel; sourceTree = "<group>"; };
 		DC13ABCF25AED8010045E8FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +41,9 @@
 		DC13ABEC25AEE2370045E8FA /* Cursus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cursus.swift; sourceTree = "<group>"; };
 		DC13ABEF25AEE2490045E8FA /* Examen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examen.swift; sourceTree = "<group>"; };
 		DC13ABF225AEE3990045E8FA /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
+		DC3CCF8C25B31C3100538D30 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatiereNoteListViewController.swift; sourceTree = "<group>"; };
+		DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtudiantNoteListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +76,10 @@
 		DC13ABC225AED7E30045E8FA /* ESIREM */ = {
 			isa = PBXGroup;
 			children = (
+				DC3CCF8C25B31C3100538D30 /* SceneDelegate.swift */,
+				DC52445725B1F61C008CD9D6 /* ViewControllers */,
 				DC13ABDB25AEE1B70045E8FA /* CoreData */,
 				DC13ABC325AED7E30045E8FA /* AppDelegate.swift */,
-				DC13ABC525AED7E30045E8FA /* SceneDelegate.swift */,
-				DC13ABC725AED7E30045E8FA /* ViewController.swift */,
 				DC13ABC925AED7E30045E8FA /* Main.storyboard */,
 				DC13ABCF25AED8010045E8FA /* Assets.xcassets */,
 				DC13ABD125AED8010045E8FA /* LaunchScreen.storyboard */,
@@ -92,14 +94,23 @@
 			children = (
 				DC13ABF225AEE3990045E8FA /* Facade.swift */,
 				DC13ABDC25AEE1E10045E8FA /* Note.swift */,
-				DC13ABE025AEE20B0045E8FA /* Etudiant.swift */,
 				DC13ABE325AEE2150045E8FA /* Seance.swift */,
-				DC13ABE625AEE2200045E8FA /* Semestre.swift */,
 				DC13ABE925AEE22A0045E8FA /* Matiere.swift */,
-				DC13ABEC25AEE2370045E8FA /* Cursus.swift */,
 				DC13ABEF25AEE2490045E8FA /* Examen.swift */,
+				DC13ABE025AEE20B0045E8FA /* Etudiant.swift */,
+				DC13ABE625AEE2200045E8FA /* Semestre.swift */,
+				DC13ABEC25AEE2370045E8FA /* Cursus.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DC52445725B1F61C008CD9D6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */,
+				DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,17 +184,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC13ABDD25AEE1E10045E8FA /* Note.swift in Sources */,
+				DC52445925B1F65E008CD9D6 /* EtudiantNoteListViewController.swift in Sources */,
 				DC13ABE725AEE2200045E8FA /* Semestre.swift in Sources */,
 				DC13ABCE25AED7E40045E8FA /* ESIREM.xcdatamodeld in Sources */,
 				DC13ABF325AEE3990045E8FA /* Facade.swift in Sources */,
 				DC13ABE425AEE2150045E8FA /* Seance.swift in Sources */,
-				DC13ABC825AED7E30045E8FA /* ViewController.swift in Sources */,
 				DC13ABEA25AEE22A0045E8FA /* Matiere.swift in Sources */,
+				DC3CCF9025B3220400538D30 /* MatiereNoteListViewController.swift in Sources */,
 				DC13ABC425AED7E30045E8FA /* AppDelegate.swift in Sources */,
-				DC13ABC625AED7E30045E8FA /* SceneDelegate.swift in Sources */,
 				DC13ABED25AEE2370045E8FA /* Cursus.swift in Sources */,
 				DC13ABF025AEE2490045E8FA /* Examen.swift in Sources */,
 				DC13ABE125AEE20B0045E8FA /* Etudiant.swift in Sources */,
+				DC3CCF8D25B31C3100538D30 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +349,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PeterBachour.ESIREM;
+				PRODUCT_BUNDLE_IDENTIFIER = Peter.ESIREM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,10 +368,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PeterBachour.ESIREM;
+				PRODUCT_BUNDLE_IDENTIFIER = Peter.ESIREM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

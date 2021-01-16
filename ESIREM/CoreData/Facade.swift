@@ -9,8 +9,6 @@ import Foundation
 import CoreData
 import UIKit
 
-
-
 class Facade {
     private let objctx = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private static var instance : Facade?=nil
@@ -33,11 +31,11 @@ class Facade {
         let request = NSFetchRequest<CDEtudiant>(entityName: "CDEtudiant")
         return try objctx.fetch(request) as! Etudiant
     }
-    func createEtudiant(firstname :String, lastname: String, matricule: String)-> Etudiant {
+    func createEtudiant(firstname :String, lastname: String, nbEtudiant: String)-> Etudiant {
         var etudiant = NSEntityDescription.insertNewObject(forEntityName: "CDEtudiant", into: objctx) as! Etudiant
         etudiant.firstname = firstname
         etudiant.lastname = lastname
-        etudiant.matricule = matricule
+        etudiant.nbEtudiant = nbEtudiant
         return etudiant
     }
     func createSemestre(semestre: Float , annee: Float )-> Semestre{
@@ -108,7 +106,7 @@ class Facade {
     
     func remplir()->Etudiant {
         
-        let etudiant = createEtudiant(firstname: "Peter", lastname: "Bachour", matricule: "pb912525")
+        let etudiant = createEtudiant(firstname: "Peter", lastname: "Bachour", nbEtudiant: "pb912525")
         let semestre1 = createSemestre(semestre: 1, annee: 2020)
         let semestre2 = createSemestre(semestre: 2, annee: 2020)
         let cpp = createMatiere(titre: "C++", credit: 6, Code: "CPP20", semestre: semestre2)
@@ -149,9 +147,6 @@ class Facade {
         let tpc5 = createExamen(titre: "TPC",poids: 30, matiere: genie)
         let partiel5 = createExamen(titre: "Partiel",poids: 30, matiere: genie)
         let final5 = createExamen(titre: "Final",poids: 40, matiere: genie)
-
-        
-        
         
         createNote(examen: tpc, note: 17, coeff: tpc.Poids, matiere: cpp , etudiant: etudiant)
         createNote(examen: partiel, note: 16, coeff: partiel.Poids, matiere: cpp, etudiant: etudiant)
