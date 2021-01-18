@@ -23,6 +23,7 @@
 		DC3CCF8D25B31C3100538D30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3CCF8C25B31C3100538D30 /* SceneDelegate.swift */; };
 		DC3CCF9025B3220400538D30 /* MatiereNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */; };
 		DC52445925B1F65E008CD9D6 /* EtudiantNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */; };
+		DC5B8EFE25B6217700C79F1D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		DC3CCF8C25B31C3100538D30 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatiereNoteListViewController.swift; sourceTree = "<group>"; };
 		DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtudiantNoteListViewController.swift; sourceTree = "<group>"; };
+		DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */,
 				DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */,
+				DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5B8EFE25B6217700C79F1D /* LoginViewController.swift in Sources */,
 				DC13ABDD25AEE1E10045E8FA /* Note.swift in Sources */,
 				DC52445925B1F65E008CD9D6 /* EtudiantNoteListViewController.swift in Sources */,
 				DC13ABE725AEE2200045E8FA /* Semestre.swift in Sources */,
