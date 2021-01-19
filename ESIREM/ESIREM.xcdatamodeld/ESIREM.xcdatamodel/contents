@@ -5,9 +5,13 @@
         <relationship name="cdMatiere" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMatiere" inverseName="cdCursus" inverseEntity="CDMatiere"/>
     </entity>
     <entity name="CDEtudiant" representedClassName="CDEtudiant" syncable="YES" codeGenerationType="class">
+        <attribute name="cdAdress" optional="YES" attributeType="String"/>
+        <attribute name="cdDOB" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="cdFirstName" optional="YES" attributeType="String"/>
         <attribute name="cdLastName" optional="YES" attributeType="String"/>
+        <attribute name="cdMail" optional="YES" attributeType="String"/>
         <attribute name="cdNumeroEtudiant" optional="YES" attributeType="String"/>
+        <attribute name="cdPhoto" optional="YES" attributeType="String"/>
         <relationship name="cdNoteEtudiant" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDNote" inverseName="cdNoteEtudiant" inverseEntity="CDNote"/>
     </entity>
     <entity name="CDExamen" representedClassName="CDExamen" syncable="YES" codeGenerationType="class">
@@ -43,7 +47,7 @@
     </entity>
     <elements>
         <element name="CDCursus" positionX="-170.69921875" positionY="-173.40234375" width="128" height="73"/>
-        <element name="CDEtudiant" positionX="106.9453125" positionY="-312.3515625" width="128" height="103"/>
+        <element name="CDEtudiant" positionX="106.9453125" positionY="-312.3515625" width="128" height="163"/>
         <element name="CDExamen" positionX="391.8984375" positionY="-49.55078125" width="128" height="103"/>
         <element name="CDMatiere" positionX="108.73828125" positionY="-96.53515625" width="128" height="148"/>
         <element name="CDNote" positionX="368.015625" positionY="-270.7890625" width="128" height="103"/>

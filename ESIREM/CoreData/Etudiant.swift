@@ -20,6 +20,19 @@ protocol  Etudiant {
     var note : [Notes]{
         get
     }
+    var adress : String {
+        get set
+    }
+    var dob : Date {
+        get set
+    }
+    var mail : String {
+        get set
+    }
+    var photo : String {
+        get set
+    }
+    
     func add(note:Notes)
     func remove(note:Notes)
     
@@ -82,4 +95,39 @@ extension CDEtudiant : Etudiant {
             return cdNumeroEtudiant!
         }
     }
+    
+    var adress : String {
+        get{
+            return  cdAdress!
+        }
+        set{
+            cdAdress = newValue
+        }
+    }
+    var dob : Date {
+        get{
+            return cdDOB!
+        }
+        set{
+            cdDOB = newValue
+        }
+    }
+    var mail : String {
+        get{
+            return cdMail!
+        }
+        set {
+            cdMail = newValue
+        }
+    }
+    var photo : String {
+        get{
+            return cdPhoto!
+        }
+        set{
+            cdPhoto = newValue
+        }
+    }
+    
+    
 }

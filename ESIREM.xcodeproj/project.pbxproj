@@ -24,6 +24,7 @@
 		DC3CCF9025B3220400538D30 /* MatiereNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */; };
 		DC52445925B1F65E008CD9D6 /* EtudiantNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */; };
 		DC5B8EFE25B6217700C79F1D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */; };
+		DC5B8F0125B6DDDB00C79F1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B8F0025B6DDDB00C79F1D /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatiereNoteListViewController.swift; sourceTree = "<group>"; };
 		DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtudiantNoteListViewController.swift; sourceTree = "<group>"; };
 		DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DC5B8F0025B6DDDB00C79F1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */,
 				DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */,
 				DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */,
+				DC5B8F0025B6DDDB00C79F1D /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				DC52445925B1F65E008CD9D6 /* EtudiantNoteListViewController.swift in Sources */,
 				DC13ABE725AEE2200045E8FA /* Semestre.swift in Sources */,
 				DC13ABCE25AED7E40045E8FA /* ESIREM.xcdatamodeld in Sources */,
+				DC5B8F0125B6DDDB00C79F1D /* HomeViewController.swift in Sources */,
 				DC13ABF325AEE3990045E8FA /* Facade.swift in Sources */,
 				DC13ABE425AEE2150045E8FA /* Seance.swift in Sources */,
 				DC13ABEA25AEE22A0045E8FA /* Matiere.swift in Sources */,

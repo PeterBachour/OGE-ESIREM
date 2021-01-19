@@ -9,16 +9,23 @@ import Foundation
 import UIKit
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         setGradientBackground(colorTop: UIColor(named: "Red")!, colorBottom: UIColor(named: "Dark Blue")!)
+        self.passwordTextField.delegate = self
+        self.usernameTextField.delegate = self
     }
     
     func setGradientBackground(colorTop: UIColor,  colorBottom: UIColor) {
@@ -31,4 +38,27 @@ class LoginViewController: UIViewController {
 
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if usernameTextField.isFirstResponder {
+            self.passwordTextField.becomeFirstResponder()
+            self.usernameTextField.resignFirstResponder()
+        } else {
+            self.view.endEditing(true)
+        }
+        return false
+    }
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        if usernameTextField.text != "PeterBachour" || passwordTextField.text != "COV2020" {
+            self.errorLabel.text = "Username or Password incorrect"
+            self.errorLabel.alpha = 1
+        } else {
+            let naviggationViewController = self.storyboard?.instantiateViewController(identifier: "NavigationController") as? UINavigationController
+            self.view.window?.rootViewController = naviggationViewController
+            self.view.window?.makeKeyAndVisible()
+        }
+        
+    }
+    
 }
