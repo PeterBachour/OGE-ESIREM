@@ -9,7 +9,6 @@ import UIKit
 
 class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var EtudiantName: UILabel!
     var etudiant = (UIApplication.shared.delegate as! AppDelegate).etudiant!
     var Moyenne =  (UIApplication.shared.delegate as! AppDelegate).Moyenne!
     
@@ -28,7 +27,7 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = etudiant.firstname + " " + etudiant.lastname
+        //navigationItem.title = etudiant.firstname + " " + etudiant.lastname
         PDFButton()
         
         for n in etudiant.note{
@@ -48,6 +47,9 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
                 matiere[sem.count-1]=[m]
             }
         }
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+
     }
     
     @objc func activityControllerShow(sender: UIBarButtonItem){
@@ -72,8 +74,11 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
         return sem.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Semestre \(section + 1)"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "Header", for: [1,0])
+        (cell1.viewWithTag(4) as! UILabel).text = "Semestre \(section + 1)"
+        return cell1
+        
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == sem.count-1{
@@ -122,8 +127,12 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
         (cell.viewWithTag(1) as! UILabel).text = "\(m.Titre)"
         (cell.viewWithTag(2) as! UILabel).text = "\(m.Credit)"
         (cell.viewWithTag(3) as! UILabel).text = "\(m.noteFinal(etud: etudiant))"
+        print(indexPath.row)
+        if indexPath.row == 0 {
+          
+        }
         return cell
-    
+
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return matiere[section]!.count
