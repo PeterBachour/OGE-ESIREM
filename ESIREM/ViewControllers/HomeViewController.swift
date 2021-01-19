@@ -10,10 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradientBackground(colorTop: UIColor(named: "Red")!, colorBottom: UIColor(named: "Dark Blue")!)
+//        nameLabel.text = "ff"
     }
         
     

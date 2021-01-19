@@ -50,15 +50,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        if usernameTextField.text != "PeterBachour" || passwordTextField.text != "COV2020" {
+        if usernameTextField.text != "Peter" || passwordTextField.text != "B" {
             self.errorLabel.text = "Username or Password incorrect"
             self.errorLabel.alpha = 1
         } else {
-            let naviggationViewController = self.storyboard?.instantiateViewController(identifier: "NavigationController") as? UINavigationController
-            self.view.window?.rootViewController = naviggationViewController
-            self.view.window?.makeKeyAndVisible()
+            if let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as? HomeViewController {
+                self.present(homeVC, animated: true, completion: nil)
+                homeVC.nameLabel.text = "Salut " + usernameTextField.text! + "!"
+            }
         }
-        
     }
-    
 }
