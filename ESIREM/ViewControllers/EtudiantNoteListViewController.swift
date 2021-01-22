@@ -16,18 +16,8 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
     var matiere=[Int:[Matiere]]()
     var examen=[Examen]()
     
-    func PDFButton() {
-        let btn1 = UIButton(type: .custom)
-        btn1.setImage(UIImage(named: "PDF icon.png"), for: .normal)
-        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btn1.addTarget(self, action: #selector(activityControllerShow(sender:)), for: .touchUpInside)
-        let item1 = UIBarButtonItem(customView: btn1)
-        self.navigationItem.setRightBarButton(item1, animated: true)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        PDFButton()
         
         for n in etudiant.note{
             let m=n.Examen.Matiere
@@ -48,7 +38,7 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
         }
     }
     
-    @objc func activityControllerShow(sender: UIBarButtonItem){
+    @IBAction func ShareButtonTapped(_ sender: Any) {
         let data = NSMutableData()
         UIGraphicsBeginPDFContextToData(data, view.bounds, nil)
         UIGraphicsBeginPDFPage()
@@ -57,11 +47,11 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
         let path = NSTemporaryDirectory() + ".pdf"
         data.write(toFile: path, atomically: true)
         let documento = NSData(contentsOfFile: path)
-        
         let activityController = UIActivityViewController(activityItems: [documento!], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
+
     }
-    
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

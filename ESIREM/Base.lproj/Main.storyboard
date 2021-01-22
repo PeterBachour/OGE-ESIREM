@@ -353,6 +353,12 @@
                                                 <segue destination="8km-sz-bBN" kind="show" id="OHZ-Fz-0vM"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="share" image="square.and.arrow.up" catalog="system" id="YiE-zP-f89">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="ShareButtonTapped:" destination="qiN-5o-ElL" id="NtN-5A-zY5"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                                 <userDefinedRuntimeAttributes>
@@ -709,8 +715,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="AMX-tF-XZx"/>
         <segue reference="YWW-Hw-wtA"/>
-        <segue reference="7DE-vm-fg6"/>
+        <segue reference="OHZ-Fz-0vM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>
@@ -718,6 +725,7 @@
         <image name="chevron.left.circle" catalog="system" width="128" height="121"/>
         <image name="esirem-removebg-preview" width="814" height="306"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
