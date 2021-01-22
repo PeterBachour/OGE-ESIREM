@@ -25,6 +25,7 @@
 		DC52445925B1F65E008CD9D6 /* EtudiantNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */; };
 		DC5B8EFE25B6217700C79F1D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */; };
 		DC5B8F0125B6DDDB00C79F1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B8F0025B6DDDB00C79F1D /* HomeViewController.swift */; };
+		DC9F95D825BB2722003A7F23 /* DossierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F95D725BB2722003A7F23 /* DossierViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		DC52445825B1F65E008CD9D6 /* EtudiantNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtudiantNoteListViewController.swift; sourceTree = "<group>"; };
 		DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DC5B8F0025B6DDDB00C79F1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC9F95D725BB2722003A7F23 /* DossierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DossierViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				DC3CCF8F25B3220400538D30 /* MatiereNoteListViewController.swift */,
 				DC5B8EFD25B6217700C79F1D /* LoginViewController.swift */,
 				DC5B8F0025B6DDDB00C79F1D /* HomeViewController.swift */,
+				DC9F95D725BB2722003A7F23 /* DossierViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				DC13ABED25AEE2370045E8FA /* Cursus.swift in Sources */,
 				DC13ABF025AEE2490045E8FA /* Examen.swift in Sources */,
 				DC13ABE125AEE20B0045E8FA /* Etudiant.swift in Sources */,
+				DC9F95D825BB2722003A7F23 /* DossierViewController.swift in Sources */,
 				DC3CCF8D25B31C3100538D30 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,11 +31,15 @@ class Facade {
         let request = NSFetchRequest<CDEtudiant>(entityName: "CDEtudiant")
         return try objctx.fetch(request) as! Etudiant
     }
-    func createEtudiant(firstname :String, lastname: String, nbEtudiant: String)-> Etudiant {
+    func createEtudiant(firstname :String, lastname: String, nbEtudiant: String, adress: String, mail: String, photoName: String, dob: String)-> Etudiant {
         var etudiant = NSEntityDescription.insertNewObject(forEntityName: "CDEtudiant", into: objctx) as! Etudiant
         etudiant.firstname = firstname
         etudiant.lastname = lastname
         etudiant.nbEtudiant = nbEtudiant
+        etudiant.adress = adress
+        etudiant.mail = mail
+        etudiant.photo = photoName
+        etudiant.dob = dob
         return etudiant
     }
     func createSemestre(semestre: Float , annee: Float )-> Semestre{
@@ -106,7 +110,7 @@ class Facade {
     
     func remplir()->Etudiant {
         
-        let etudiant = createEtudiant(firstname: "Peter", lastname: "Bachour", nbEtudiant: "pb912525")
+        let etudiant = createEtudiant(firstname: "Peter", lastname: "Bachour", nbEtudiant: "pb912525", adress: "21000, Dijon", mail: "peter_bachour@icloud.com", photoName: "peter", dob: "15/09/1998")
         let semestre1 = createSemestre(semestre: 1, annee: 2020)
         let semestre2 = createSemestre(semestre: 2, annee: 2020)
         let cpp = createMatiere(titre: "C++", credit: 6, Code: "CPP20", semestre: semestre2)

@@ -8,6 +8,19 @@
 import UIKit
 import CoreData
 
+//        let etudiant = createEtudiant(firstname: "Peter", lastname: "Bachour", nbEtudiant: "pb912525", adress: "21000, Dijon", mail: "peter_bachour@icloud.com", photoName: "peter", dob: "15/09/1998")
+//func createEtudiant(firstname :String, lastname: String, nbEtudiant: String, adress: String, mail: String, photoName: String, dob: String)-> Etudiant {
+//var etudiant = NSEntityDescription.insertNewObject(forEntityName: "CDEtudiant", into: objctx) as! Etudiant
+//etudiant.firstname = firstname
+//etudiant.lastname = lastname
+//etudiant.nbEtudiant = nbEtudiant
+//etudiant.adress = adress
+//etudiant.mail = mail
+//etudiant.photo = photoName
+//etudiant.dob = dob
+//return etudiant
+//}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

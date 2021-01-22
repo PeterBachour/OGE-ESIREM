@@ -6,7 +6,7 @@
     </entity>
     <entity name="CDEtudiant" representedClassName="CDEtudiant" syncable="YES" codeGenerationType="class">
         <attribute name="cdAdress" optional="YES" attributeType="String"/>
-        <attribute name="cdDOB" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="cdDOB" optional="YES" attributeType="String"/>
         <attribute name="cdFirstName" optional="YES" attributeType="String"/>
         <attribute name="cdLastName" optional="YES" attributeType="String"/>
         <attribute name="cdMail" optional="YES" attributeType="String"/>

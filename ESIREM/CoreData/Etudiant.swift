@@ -23,7 +23,7 @@ protocol  Etudiant {
     var adress : String {
         get set
     }
-    var dob : Date {
+    var dob : String {
         get set
     }
     var mail : String {
@@ -104,7 +104,7 @@ extension CDEtudiant : Etudiant {
             cdAdress = newValue
         }
     }
-    var dob : Date {
+    var dob : String {
         get{
             return cdDOB!
         }
