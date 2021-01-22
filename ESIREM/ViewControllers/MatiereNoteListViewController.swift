@@ -9,59 +9,55 @@ import Foundation
 
 import UIKit
 
-class MatiereNoteListViewController: UITableViewController {
+class MatiereNoteListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
     var exam = [Notes]()
+    var note = Float()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = exam[0].Examen.Matiere.Titre
+        navigationBar.topItem?.title = exam[0].Examen.Matiere.Titre
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "  Examen                                          Coeff %      Note"
-    }
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0{
-            let tableViewHeader = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0))
-            tableViewHeader.backgroundColor = UIColor.lightGray
-            
-            let version = UILabel(frame: CGRect(x: 10, y: 0, width: tableView.frame.width, height: 30))
-            let version1 = UILabel(frame: CGRect(x: 225, y: 0, width: tableView.frame.width, height: 30))
-            let version2 = UILabel(frame: CGRect(x: 305, y: 0, width: tableView.frame.width, height: 30))
-            
-            version.text = "Examen"
-            version2.text = "Note"
-            version1.text = "Coeff %"
-            
-            tableViewHeader.addSubview(version1)
-            tableViewHeader.addSubview(version2)
-            tableViewHeader.addSubview(version)
-            return tableViewHeader
-        }
-        return nil
-
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "Header", for: [0,0])
+        return cell
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exam.count
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exam", for: indexPath)
         let m = exam[indexPath.row]
         (cell.viewWithTag(1) as! UILabel).text = "\(m.Examen.titre)"
         (cell.viewWithTag(2) as! UILabel).text = "\(m.Coeff)"
         (cell.viewWithTag(3) as! UILabel).text = "\(m.Note)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0))
+        
+        let version = UILabel(frame: CGRect(x: -25, y: 0, width: tableView.frame.width, height: 30))
+        version.font = version.font.withSize(17)
+        version.text = "Note Final: \(note)"
+        version.textColor = UIColor(named: "Red")
+        version.textAlignment = .right
+                    
+        tableViewFooter.addSubview(version)
+        return tableViewFooter
     }
 }
 

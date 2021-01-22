@@ -27,7 +27,6 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //navigationItem.title = etudiant.firstname + " " + etudiant.lastname
         PDFButton()
         
         for n in etudiant.note{
@@ -47,9 +46,6 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
                 matiere[sem.count-1]=[m]
             }
         }
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
-
     }
     
     @objc func activityControllerShow(sender: UIBarButtonItem){
@@ -85,15 +81,15 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
             let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0))
             
             let version = UILabel(frame: CGRect(x: -25, y: 25, width: tableView.frame.width, height: 30))
-            version.font = version.font.withSize(14)
+            version.font = version.font.withSize(15)
             version.text = "GPA: \(Moyenne/5)"
-            version.textColor = UIColor.lightGray
+            version.textColor = UIColor(named: "Red")
             version.textAlignment = .right
             
             let version1 = UILabel(frame: CGRect(x: -25, y: 0, width: tableView.frame.width, height: 30))
-            version1.font = version.font.withSize(14)
+            version1.font = version.font.withSize(15)
             version1.text = "Moyenne : \(Moyenne)"
-            version1.textColor = UIColor.lightGray
+            version1.textColor = UIColor(named: "Red")
             version1.textAlignment = .right
             
             tableViewFooter.addSubview(version1)
@@ -127,10 +123,6 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
         (cell.viewWithTag(1) as! UILabel).text = "\(m.Titre)"
         (cell.viewWithTag(2) as! UILabel).text = "\(m.Credit)"
         (cell.viewWithTag(3) as! UILabel).text = "\(m.noteFinal(etud: etudiant))"
-        print(indexPath.row)
-        if indexPath.row == 0 {
-          
-        }
         return cell
 
     }
@@ -144,14 +136,16 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedSection = indexPath.section
         selectedRow = indexPath.row
-        performSegue(withIdentifier: "SegueLinkMatiere", sender: nil)
+        performSegue(withIdentifier: "exam", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SegueLinkMatiere"
+        if segue.identifier == "exam"
         {
             let mat = matiere[selectedSection]![selectedRow]
             let exam = ExamenDeMatiere(m: mat)
             (segue.destination as! MatiereNoteListViewController).exam = exam
+            (segue.destination as! MatiereNoteListViewController).note = mat.noteFinal(etud: etudiant)
+
         }
     }
 
