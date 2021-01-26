@@ -53,7 +53,6 @@ class MatiereNoteListViewController: UIViewController, UITableViewDataSource, UI
         let version = UILabel(frame: CGRect(x: -25, y: 0, width: tableView.frame.width, height: 30))
         version.font = version.font.withSize(17)
         version.text = "Note Final: \(note)"
-        version.textColor = UIColor(named: "Red")
         version.textAlignment = .right
                     
         tableViewFooter.addSubview(version)

@@ -8,26 +8,36 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate 
+ {
     
     @IBOutlet weak var nameLabel: UILabel!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground(colorTop: UIColor(named: "Red")!, colorBottom: UIColor(named: "Dark Blue")!)
+        self.nameLabel.text = "Salut Peter Bachour!"
+        self.nameLabel.textColor = UIColor(named: "Dark Blue")
     }
-        
     
-    func setGradientBackground(colorTop: UIColor,  colorBottom: UIColor) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
-        gradientLayer.locations = [0, 1]
-        gradientLayer.frame = self.view.bounds
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let horaire = tableView.dequeueReusableCell(withIdentifier: "horaire", for: indexPath)
+        let dossier = tableView.dequeueReusableCell(withIdentifier: "dossier", for: indexPath)
+        let notes = tableView.dequeueReusableCell(withIdentifier: "notes", for: indexPath)
+        if indexPath.row == 0 {
+            return horaire
+        }else if indexPath.row == 1 {
+            return dossier
+        }
+        return notes
     }
 }
 

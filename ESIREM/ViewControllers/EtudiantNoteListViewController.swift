@@ -73,13 +73,11 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
             let version = UILabel(frame: CGRect(x: -25, y: 25, width: tableView.frame.width, height: 30))
             version.font = version.font.withSize(15)
             version.text = "GPA: \(Moyenne/5)"
-            version.textColor = UIColor(named: "Red")
             version.textAlignment = .right
             
             let version1 = UILabel(frame: CGRect(x: -25, y: 0, width: tableView.frame.width, height: 30))
             version1.font = version.font.withSize(15)
             version1.text = "Moyenne : \(Moyenne)"
-            version1.textColor = UIColor(named: "Red")
             version1.textAlignment = .right
             
             tableViewFooter.addSubview(version1)
@@ -135,7 +133,6 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
             let exam = ExamenDeMatiere(m: mat)
             (segue.destination as! MatiereNoteListViewController).exam = exam
             (segue.destination as! MatiereNoteListViewController).note = mat.noteFinal(etud: etudiant)
-
         }
     }
 

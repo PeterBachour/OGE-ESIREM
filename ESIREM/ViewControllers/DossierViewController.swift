@@ -22,11 +22,17 @@ class DossierViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageEtudiant.image = UIImage(named: "\(etudiant.photo)")
+        imageEtudiant.layer.cornerRadius = imageEtudiant.frame.height/2
+        imageEtudiant.layer.borderWidth = 5
+        imageEtudiant.layer.masksToBounds = false
+        imageEtudiant.layer.borderColor = UIColor(named: "Dark Blue")?.cgColor
+        imageEtudiant.clipsToBounds = true
+
+        
         NomPrenomEtudiant.text = "\(etudiant.firstname) \(etudiant.lastname)"
         DOBEtudiant.text = "\(etudiant.dob)"
         mailEtudiant.text = "\(etudiant.mail)"
         adressEtudiant.text = "\(etudiant.adress)"
         numeroEtudiant.text = "\(etudiant.nbEtudiant)"
-    }        
-
+    }
 }

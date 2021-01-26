@@ -23,22 +23,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground(colorTop: UIColor(named: "Red")!, colorBottom: UIColor(named: "Dark Blue")!)
         self.passwordTextField.delegate = self
         self.usernameTextField.delegate = self
+        self.passwordTextField.layer.borderColor = UIColor(named: "Light Blue")?.cgColor
+        self.usernameTextField.layer.borderColor = UIColor(named: "Light Blue")?.cgColor
+        self.passwordTextField.layer.borderWidth = 3.0
+        self.usernameTextField.layer.borderWidth = 3.0
+        self.loginButton.layer.backgroundColor = UIColor(named: "Dark Blue")?.cgColor
+        self.loginButton.layer.cornerRadius = self.loginButton.frame.height/2
+        self.loginButton.layer.masksToBounds = true
+        
     }
     
-    func setGradientBackground(colorTop: UIColor,  colorBottom: UIColor) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
-        gradientLayer.locations = [0, 1]
-        gradientLayer.frame = self.view.bounds
-
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if usernameTextField.isFirstResponder {
             self.passwordTextField.becomeFirstResponder()
@@ -50,13 +46,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        if usernameTextField.text != "" || passwordTextField.text != "" {
+        if usernameTextField.text != "Peter" || passwordTextField.text != "" {
             self.errorLabel.text = "Username or Password incorrect"
             self.errorLabel.alpha = 1
         } else {
             if let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as? HomeViewController {
                 self.present(homeVC, animated: true, completion: nil)
-                homeVC.nameLabel.text = "Salut " + usernameTextField.text! + "!"
             }
         }
     }
