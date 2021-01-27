@@ -42,6 +42,7 @@ class Facade {
         etudiant.dob = dob
         return etudiant
     }
+    
     func createSemestre(semestre: Float , annee: Float )-> Semestre{
         let semestre1 = NSEntityDescription.insertNewObject(forEntityName: "CDSemestre", into: objctx) as! Semestre
         semestre1.annee = annee
@@ -120,8 +121,7 @@ class Facade {
         
         let genie = createMatiere(titre: "Genie Logiciel", credit: 5, Code: "GEL20", semestre: semestre1)
         let marketing = createMatiere(titre: "Marketing", credit: 2, Code: "MKT20", semestre: semestre1)
-        
-        
+                
         semestre1.add(matiere: genie)
         semestre1.add(matiere: marketing)
         
