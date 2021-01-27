@@ -16,7 +16,7 @@ Une fois authentifier une page d'accueil est affichée. L'utilisateur a 3 choix 
 - choisir de voir son dossier
 - choisir de voir ses notes
 
-<img src="Screenshots/homepage.png" width="200">
+<img src="Screenshots/homepage.png" width="116">
 
 ### Horaire
 
@@ -26,13 +26,13 @@ Pour le moment cette page n'a pas été programmé encore.
 
 L'utilisateur pourra voir ses données personelles ainsi de les modifier grace un bouton edit.
 
-<img src="Screenshots/dossier.png" width="200">
+<img src="Screenshots/dossier.png" width="116">
 
 ### Notes
 
 L'utilisateur aura accès à ses notes en général et a aussi la capacité de générer un PDF de ses notes. Il a aussi le droit de voir le détail de ses notes.
 
-<img src="Screenshots/notes.png" width="200">
+<img src="Screenshots/notes.png" width="116">
 
 ## Travail futur
 Les modifications qui pourront être apporter dans le futur pour ce projet sont les suivantes:
