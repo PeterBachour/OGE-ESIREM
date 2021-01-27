@@ -30,7 +30,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GZa-vb-8V8">
                                         <rect key="frame" x="0.0" y="52.5" width="334" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -38,7 +38,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0iJ-I1-CTx">
                                         <rect key="frame" x="0.0" y="122.5" width="334" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -63,6 +63,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="0iJ-I1-CTx" firstAttribute="height" secondItem="GZa-vb-8V8" secondAttribute="height" id="6nA-jr-KTI"/>
                                     <constraint firstItem="4bp-Jb-bPy" firstAttribute="height" secondItem="GZa-vb-8V8" secondAttribute="height" id="Bse-NX-Xr5"/>
@@ -199,7 +201,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="myq-kQ-ijI" kind="show" identifier="dossier" id="2Z3-ZR-sUU"/>
+                                            <segue destination="myq-kQ-ijI" kind="showDetail" identifier="dossier" id="2Z3-ZR-sUU"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notes" rowHeight="55" id="maF-8i-Jfq">
@@ -324,7 +326,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semestre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXF-8e-Sp1">
-                                                    <rect key="frame" x="171" y="11" width="73" height="21"/>
+                                                    <rect key="frame" x="157" y="11" width="100" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="qIV-Ww-MVg"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -336,12 +341,12 @@
                                                 <constraint firstItem="XWW-Cj-HHj" firstAttribute="baseline" secondItem="7fU-UQ-0ni" secondAttribute="firstBaseline" id="AvD-ru-nfb"/>
                                                 <constraint firstItem="XWW-Cj-HHj" firstAttribute="leading" secondItem="XFe-IS-8qi" secondAttribute="leadingMargin" id="CHY-MW-KqL"/>
                                                 <constraint firstAttribute="bottom" secondItem="uXF-8e-Sp1" secondAttribute="bottom" constant="43" id="Ivu-yR-LAW"/>
+                                                <constraint firstItem="uXF-8e-Sp1" firstAttribute="leading" secondItem="XFe-IS-8qi" secondAttribute="centerXWithinMargins" constant="-50" id="KVq-iP-hNH"/>
                                                 <constraint firstItem="7fU-UQ-0ni" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XWW-Cj-HHj" secondAttribute="trailing" constant="8" symbolic="YES" id="PCh-Vi-jQu"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uXF-8e-Sp1" secondAttribute="trailing" constant="20" symbolic="YES" id="TRQ-gv-uSl"/>
                                                 <constraint firstItem="2f7-Kl-Pdx" firstAttribute="trailing" secondItem="XFe-IS-8qi" secondAttribute="trailingMargin" constant="-15" id="Ujz-I5-i4y"/>
                                                 <constraint firstItem="2f7-Kl-Pdx" firstAttribute="leading" secondItem="7fU-UQ-0ni" secondAttribute="trailing" constant="15" id="Vcq-ee-Iwd"/>
                                                 <constraint firstItem="XWW-Cj-HHj" firstAttribute="firstBaseline" secondItem="2f7-Kl-Pdx" secondAttribute="baseline" id="eJG-Pl-hag"/>
-                                                <constraint firstItem="uXF-8e-Sp1" firstAttribute="leading" secondItem="XFe-IS-8qi" secondAttribute="leading" constant="171" id="efs-HT-b7P"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uXF-8e-Sp1" secondAttribute="trailing" constant="20" symbolic="YES" id="gkS-sa-v50"/>
                                                 <constraint firstItem="XWW-Cj-HHj" firstAttribute="centerY" secondItem="7fU-UQ-0ni" secondAttribute="centerY" id="n1o-Nc-ALB"/>
                                                 <constraint firstItem="XWW-Cj-HHj" firstAttribute="baseline" secondItem="2f7-Kl-Pdx" secondAttribute="baseline" id="tEs-bC-YvI"/>
                                                 <constraint firstItem="uXF-8e-Sp1" firstAttribute="top" secondItem="XFe-IS-8qi" secondAttribute="top" constant="11" id="tO6-91-REN"/>
@@ -852,8 +857,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YWW-Hw-wtA"/>
-        <segue reference="7DE-vm-fg6"/>
+        <segue reference="bR7-lH-dnB"/>
+        <segue reference="OHZ-Fz-0vM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>

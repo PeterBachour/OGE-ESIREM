@@ -131,8 +131,9 @@ class EtudiantNoteListViewController: UIViewController, UITableViewDataSource, U
         {
             let mat = matiere[selectedSection]![selectedRow]
             let exam = ExamenDeMatiere(m: mat)
-            (segue.destination as! MatiereNoteListViewController).exam = exam
-            (segue.destination as! MatiereNoteListViewController).note = mat.noteFinal(etud: etudiant)
+            let dest = segue.destination as! MatiereNoteListViewController
+            dest.exam = exam
+            dest.note = mat.noteFinal(etud: etudiant)
         }
     }
 
