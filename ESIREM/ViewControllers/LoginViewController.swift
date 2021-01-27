@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        if usernameTextField.text != "Peter" || passwordTextField.text != "" {
+        if usernameTextField.text != "PeterBachour" || passwordTextField.text != "ios2020" {
             self.errorLabel.text = "Username or Password incorrect"
             self.errorLabel.alpha = 1
         } else {

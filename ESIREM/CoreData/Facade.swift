@@ -160,8 +160,8 @@ class Facade {
         createNote(examen: partiel1, note: 17, coeff: partiel1.Poids, matiere: db, etudiant: etudiant)
         createNote(examen: final1, note: 16, coeff: final1.Poids, matiere: db, etudiant: etudiant)
         
-        createNote(examen: tpc2, note: 17, coeff: tpc2.Poids, matiere: ios , etudiant: etudiant)
-        createNote(examen: final2, note: 15, coeff: final2.Poids, matiere: ios, etudiant: etudiant)
+        createNote(examen: tpc2, note: 20, coeff: tpc2.Poids, matiere: ios , etudiant: etudiant)
+        createNote(examen: final2, note: 18, coeff: final2.Poids, matiere: ios, etudiant: etudiant)
         
         createNote(examen: tpc3, note: 17, coeff: tpc3.Poids, matiere: web , etudiant: etudiant)
         createNote(examen: partiel3, note: 16, coeff: partiel3.Poids, matiere: web, etudiant: etudiant)
